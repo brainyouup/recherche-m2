@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Facteurs Prédictifs de la Prise de Décision Sous Risque</title>
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+line-height: 1.6;
+color: #333;
+background: linear-gradient(135deg, #9DC9E7 0%, #7AB3D3 100%);
+min-height: 100vh;
+padding: 20px;
+}
+
+.container {
+max-width: 800px;
+margin: 0 auto;
+background: white;
+border-radius: 20px;
+box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+overflow: hidden;
+animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(30px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
+.header {
+background: linear-gradient(135deg, #5A9AC7 0%, #9DC9E7 100%);
+color: white;
+padding: 40px 30px;
+text-align: center;
+position: relative;
+overflow: hidden;
+}
+
+.header::before {
+content: '';
+position: absolute;
+top: -50%;
+left: -50%;
+width: 200%;
+height: 200%;
+background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+0%, 100% { transform: scale(1); }
+50% { transform: scale(1.1); }
+}
+
+.header h1 {
+font-size: 2.8em;
+margin-bottom: 15px;
+font-weight: 700;
+text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+position: relative;
+z-index: 1;
+}
+
+.subtitle {
+font-size: 1.5em;
+opacity: 0.9;
+margin-bottom: 10px;
+position: relative;
+z-index: 1;
+font-style: italic;
+font-weight: 700;
+text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.author {
+font-size: 1.2em;
+font-weight: 600;
+margin-top: 20px;
+position: relative;
+z-index: 1;
+}
+
+.supervision {
+font-size: 1em;
+opacity: 0.9;
+margin-top: 15px;
+position: relative;
+z-index: 1;
+font-style: italic;
+}
+
+.university {
+font-size: 0.95em;
+opacity: 0.85;
+margin-top: 8px;
+position: relative;
+z-index: 1;
+}
+
+.content {
+padding: 40px 30px;
+}
+
+.description {
+background: #f8f9fa;
+padding: 25px;
+border-radius: 15px;
+margin-bottom: 30px;
+border-left: 5px solid #9DC9E7;
+font-size: 1.1em;
+line-height: 1.7;
+}
+
+.download-section {
+text-align: center;
+margin-top: 30px;
+}
+
+.download-btn {
+display: inline-block;
+background: linear-gradient(135deg, #9DC9E7 0%, #7AB3D3 100%);
+color: white;
+padding: 18px 35px;
+text-decoration: none;
+border-radius: 50px;
+font-weight: 600;
+font-size: 1.1em;
+margin: 10px;
+transition: all 0.3s ease;
+box-shadow: 0 8px 25px rgba(157, 201, 231, 0.3);
+position: relative;
+overflow: hidden;
+}
+
+.download-btn::before {
+content: '';
+position: absolute;
+top: 0;
+left: -100%;
+width: 100%;
+height: 100%;
+background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+transition: left 0.5s;
+}
+
+.download-btn:hover::before {
+left: 100%;
+}
+
+.download-btn:hover {
+transform: translateY(-3px);
+box-shadow: 0 12px 35px rgba(157, 201, 231, 0.4);
+}
+
+.download-btn:active {
+transform: translateY(-1px);
+}
+
+.icon {
+margin-right: 10px;
+font-size: 1.2em;
+}
+
+.tags {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+justify-content: center;
+margin-top: 30px;
+}
+
+.tag {
+background: #e9ecef;
+color: #495057;
+padding: 8px 16px;
+border-radius: 25px;
+font-size: 0.9em;
+font-weight: 500;
+border: 1px solid #9DC9E7;
+}
+
+.footer {
+background: #f8f9fa;
+padding: 20px;
+text-align: center;
+color: #6c757d;
+font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+.container {
+margin: 10px;
+border-radius: 15px;
+}
+
+.header {
+padding: 30px 20px;
+}
+
+.header h1 {
+font-size: 1.8em;
+}
+
+.content {
+padding: 30px 20px;
+}
+
+.download-btn {
+padding: 15px 25px;
+font-size: 1em;
+margin: 8px;
+}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="header">
+<h1>Facteurs Prédictifs de la Prise de Décision Sous Risque</h1>
+<div class="subtitle">Cas des Guides de Haute Montagne</div>
+<div class="author">Guillaume PELLET-BOURGEOIS</div>
+<div class="supervision">Sous la direction de Dr Florent Lebon</div>
+<div class="university">Laboratoire INSERM U1093, Université de Bourgogne, France</div>
+<div class="university">Master 2 "Neuropsychologie et Neurosciences Cliniques" - UGA, Grenoble</div>
+</div>
+
+<div class="content">
+<div class="description">
+Cette recherche en <strong>neuropsychologie et psychophysiologie</strong> explore les mécanismes cognitifs qui influencent la prise de décision dans des environnements incertains. En étudiant spécifiquement les guides de haute montagne, cette étude apporte un éclairage unique sur les facteurs prédictifs qui déterminent la qualité des décisions dans des contextes où les enjeux sont critiques.
+</div>
+
+<div class="tags">
+<span class="tag">Neuropsychologie</span>
+<span class="tag">Psychophysiologie</span>
+<span class="tag">Prise de Décision</span>
+<span class="tag">Gestion du Risque</span>
+<span class="tag">Haute Montagne</span>
+</div>
+
+<div class="download-section">
+<a href="Résumé - résultats étude Facteurs Prédictifs de la Prise de Décision Sous Risque - G Pellet-Bourgeois.pdf" class="download-btn" target="_blank">
+<span class="icon">📊</span>
+Résumé des Résultats
+</a>
+</div>
+</div>
+
+<div class="footer">
+<p>Mémoire de recherche M2 - Neuropsychologie & Neurosciences Cliniques</p>
+<p>© 2024 Guillaume Pellet-Bourgeois</p>
+</div>
+</div>
+</body>
+</html>
